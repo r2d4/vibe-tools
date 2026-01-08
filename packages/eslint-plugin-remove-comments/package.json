@@ -1,0 +1,53 @@
+{
+  "name": "eslint-plugin-remove-comments",
+  "version": "2.3.7",
+  "description": "ESLint plugin to remove comments from code while preserving eslint-disable and TypeScript directives",
+  "main": "index.mjs",
+  "type": "module",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.mjs"
+    }
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "comments",
+    "remove-comments",
+    "strip-comments",
+    "jsdoc",
+    "typescript",
+    "jsx",
+    "react",
+    "code-cleanup",
+    "minify"
+  ],
+  "author": "Matt Rickard",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "vitest": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattrickard/eslint-plugin-remove-comments.git"
+  },
+  "files": [
+    "index.mjs",
+    "index.d.ts",
+    "rules/"
+  ]
+}

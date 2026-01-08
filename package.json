@@ -1,0 +1,17 @@
+{
+  "name": "vibe-tools",
+  "version": "2.3.7",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "pnpm -r test",
+    "test:watch": "pnpm -r test:watch",
+    "release": "./scripts/release.sh"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
