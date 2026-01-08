@@ -24,8 +24,8 @@ git tag "v$VERSION"
 pnpm -r publish
 
 # Push commits and tags
-git push -u origin HEAD
-git push --tags
+# git push -u origin HEAD
+# git push --tags
 
 # Create GitHub release
 gh release create "v$VERSION" --generate-notes
