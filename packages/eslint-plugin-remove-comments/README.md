@@ -262,4 +262,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Repository
 
-https://github.com/mattrickard/eslint-plugin-remove-comments
+https://github.com/r2d4/eslint-plugin-remove-comments
