@@ -67,7 +67,6 @@ const y = 2;`;
         parserOptions: PARSER_OPTIONS,
         rules: { "remove-all": "error" },
       });
-      // The comment removal preserves the blank lines structure
       expect(output.output).toBe(`const x = 1;
 
 
@@ -431,8 +430,6 @@ const x = 1;`;
         parserOptions: PARSER_OPTIONS,
         rules: { "remove-all": "error" },
       });
-      // Note: ESLint treats shebangs as comments in module code
-      // The removal is expected behavior
       expect(output.output).not.toContain("Regular comment");
       expect(output.output).toContain("const x = 1;");
     });

@@ -47,7 +47,6 @@ export default {
       ...customPatterns,
     ];
 
-    // Add prefix patterns if preservePrefix is provided
     if (options.preservePrefix && options.preservePrefix.length > 0) {
       const prefixPattern = options.preservePrefix.join("|");
       preservePatterns.push(
@@ -150,9 +149,7 @@ export default {
       const commentText = comment.value.trim();
       const cleanedText = commentText.replace(/^\*\s*/, "").trim();
 
-      // Preserve JSDoc comments if option is enabled
       if (options.preserveJSDoc && comment.type === "Block") {
-        // JSDoc comments start with /** (not just /*)
         const rawComment = sourceCode.text.slice(comment.range[0], comment.range[1]);
         if (rawComment.startsWith("/**")) {
           return true;

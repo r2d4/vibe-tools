@@ -260,7 +260,6 @@ export const truncate = (str, length) => {
     expect(output.output).not.toContain("Check if string");
     expect(output.output).not.toContain("Capitalize first");
     expect(output.output).not.toContain("Handle edge cases");
-    // Verify all exports are preserved
     expect(output.output).toContain('isEmpty');
     expect(output.output).toContain('capitalize');
     expect(output.output).toContain('truncate');

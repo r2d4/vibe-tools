@@ -6,9 +6,12 @@
   "scripts": {
     "test": "pnpm -r test",
     "test:watch": "pnpm -r test:watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "release": "./scripts/release.sh"
   },
   "devDependencies": {
+    "eslint": "^9.0.0",
     "vitest": "^2.0.0"
   },
   "engines": {

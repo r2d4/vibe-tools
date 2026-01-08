@@ -29,7 +29,6 @@ describe("JSX comments", () => {
       parserOptions: PARSER_OPTIONS,
       rules: { "remove-all": "error" },
     });
-    // JSX comments {/* */} are actually block comments and should be removed by default
     expect(messages.length).toBeGreaterThan(0);
   });
 
@@ -63,7 +62,6 @@ describe("JSX comments", () => {
       parserOptions: PARSER_OPTIONS,
       rules: { "remove-all": "error" },
     });
-    // Should remove all comments
     expect(output.output).not.toContain("Before JSX");
     expect(output.output).not.toContain("After JSX");
   });
