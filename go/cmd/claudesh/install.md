@@ -1,16 +1,20 @@
-Download and install claudesh to /usr/local/bin.
+# Install claudesh
 
-Detect the OS and architecture, then download the correct binary from:
-https://github.com/r2d4/vibe-tools/releases/latest/download/claudesh-{os}-{arch}
+```bash
+mkdir -p ~/.local/bin
+curl -fsSL -o ~/.local/bin/claudesh \
+  https://github.com/r2d4/vibe-tools/releases/latest/download/claudesh-$(uname -s | tr '[:upper:]' '[:lower:]')-$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/')
+chmod +x ~/.local/bin/claudesh
+```
 
-Where:
-- os: darwin (macOS) or linux
-- arch: arm64 (Apple Silicon, aarch64) or amd64 (Intel, x86_64)
+Ensure `~/.local/bin` is in your PATH (add to `~/.zshrc` or `~/.bashrc`):
 
-Rename the binary to `claudesh` (strip the OS and architecture suffix).
-Make it executable and move to /usr/local/bin (use sudo if needed).
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+```
 
-Verify the installation works with:
+Verify:
+
 ```bash
 claudesh --version
 ```
