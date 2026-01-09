@@ -3,6 +3,8 @@ set -e
 
 cd "$(dirname "$0")/.."
 
+npm whoami || npm login
+
 pnpm -r test
 
 (cd go/cmd/claudesh && go test -v ./...)
