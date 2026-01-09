@@ -5,7 +5,7 @@ Shebang interpreter for Claude prompts.
 ## Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/r2d4/vibe-tools/main/go/cmd/claudesh/install.md | claude -p
+curl -fsSL https://raw.githubusercontent.com/r2d4/vibe-tools/master/go/cmd/claudesh/install.md | claude -p
 ```
 
 Via Go:
