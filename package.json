@@ -8,8 +8,7 @@
     "test:watch": "pnpm -r test:watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "release": "./scripts/release.sh",
-    "release:claudesh": "./scripts/release-claudesh.sh"
+    "release": "./scripts/release.sh"
   },
   "devDependencies": {
     "eslint": "^9.0.0",

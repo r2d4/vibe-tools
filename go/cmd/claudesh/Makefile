@@ -1,5 +1,5 @@
 NAME := claudesh
-VERSION := 0.1.1
+VERSION := $(shell node -p "require('../../../package.json').version")
 BUILD_DIR := ../../../build
 LDFLAGS := -ldflags "-s -w -X main.version=$(VERSION)"
 
@@ -10,7 +10,7 @@ PLATFORMS := \
 	linux/arm64 \
 	windows/amd64
 
-.PHONY: all clean test test-integration install build release bump-patch bump-minor bump-major version
+.PHONY: all clean test test-integration install build release version
 
 all: build
 
@@ -43,27 +43,3 @@ release: clean build
 
 version:
 	@echo $(VERSION)
-
-bump-patch:
-	@CURRENT=$(VERSION); \
-	MAJOR=$$(echo $$CURRENT | cut -d. -f1); \
-	MINOR=$$(echo $$CURRENT | cut -d. -f2); \
-	PATCH=$$(echo $$CURRENT | cut -d. -f3); \
-	NEW="$$MAJOR.$$MINOR.$$((PATCH + 1))"; \
-	sed -i '' "s/^VERSION := .*/VERSION := $$NEW/" Makefile; \
-	echo "Bumped $$CURRENT -> $$NEW"
-
-bump-minor:
-	@CURRENT=$(VERSION); \
-	MAJOR=$$(echo $$CURRENT | cut -d. -f1); \
-	MINOR=$$(echo $$CURRENT | cut -d. -f2); \
-	NEW="$$MAJOR.$$((MINOR + 1)).0"; \
-	sed -i '' "s/^VERSION := .*/VERSION := $$NEW/" Makefile; \
-	echo "Bumped $$CURRENT -> $$NEW"
-
-bump-major:
-	@CURRENT=$(VERSION); \
-	MAJOR=$$(echo $$CURRENT | cut -d. -f1); \
-	NEW="$$((MAJOR + 1)).0.0"; \
-	sed -i '' "s/^VERSION := .*/VERSION := $$NEW/" Makefile; \
-	echo "Bumped $$CURRENT -> $$NEW"
