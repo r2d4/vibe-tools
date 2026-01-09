@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-remove-comments",
-  "version": "2.3.10",
+  "version": "2.3.11",
   "description": "ESLint plugin to remove comments from code while preserving eslint-disable and TypeScript directives",
   "main": "index.mjs",
   "type": "module",
